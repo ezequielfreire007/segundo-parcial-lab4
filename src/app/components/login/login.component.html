@@ -6,15 +6,20 @@
         <h3>Iniciar Sesion</h3>
       </div>
       <div class="borered-container">
-        <input class="form-control marbo15" type="email" placeholder="Ingrese Email">
-        <input class="form-control marbo15" type="password" placeholder="Ingrese Password">
-        <input class="form-control marbo15" type="password" placeholder="Ingrese Password">
-        <input *ngIf="operation == 'register'" class="form-control marbo15" type="text" placeholder="Ingrese Nick">
-      </div>
-      <div class="center marbo15">
-        <!-- *ngIf="operation == 'login'"-->
-        <a  class="btn boton">Iniciar Sesion</a>
-      </div>
+        <form action="">
+          <div class="form-group">
+            <input class="form-control marbo15" type="email" placeholder="Ingrese Email">
+            <input class="form-control marbo15" type="text" placeholder="Ingrese Nombre">
+            <input class="form-control marbo15" type="password" placeholder="Ingrese Password">
+          </div>
+
+          <input *ngIf="operation == 'register'" class="form-control marbo15" type="text" placeholder="Ingrese Nick">
+          <div class="center marbo15">
+            <!-- *ngIf="operation == 'login'"-->
+            <a  class="btn btn-primary">Iniciar Sesion</a>
+          </div>
+        </form>
+      </div> <!-- end bored container -->
     </div>
   </div>
  </div>
