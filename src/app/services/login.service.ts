@@ -12,8 +12,8 @@ export class LoginService extends GenericService {
     super(http);
   }
 
-  public tokenlog(usuario: Usuario): Promise<any> {
-    return super.post<any>('/auth/login', usuario);
+  public tokenlog(usuario: Usuario) {
+    return super.post<any>('auth/login', usuario);
   }
 
 }

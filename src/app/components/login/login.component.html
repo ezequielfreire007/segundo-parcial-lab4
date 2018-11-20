@@ -8,15 +8,34 @@
       <div class="borered-container">
         <form action="">
           <div class="form-group">
-            <input class="form-control marbo15" type="email" placeholder="Ingrese Email">
-            <input class="form-control marbo15" type="text" placeholder="Ingrese Nombre">
-            <input class="form-control marbo15" type="password" placeholder="Ingrese Password">
+            <input [(ngModel)]="usuario.email" name="email" class="form-control marbo15" type="email" placeholder="Ingrese Email">
+            <input [(ngModel)]="usuario.nombre" name="nombre"  class="form-control marbo15" type="text" placeholder="Ingrese Nombre">
+            <input [(ngModel)]="usuario.password" name="password" class="form-control marbo15" type="password" placeholder="Ingrese Password">
+       <!--
+            <form [formGroup]="perfilForm" action="">
+              <select formControlName="perfilControl" class="form-control" >
+                  <option [(ngModel)]="usuario.rol" value="profesional">Profesional</option>
+                  <option [(ngModel)]="usuario.rol" value="normal">Normal</option>
+                  <option [(ngModel)]="usuario.rol" value="free">Free</option>
+               <option [value]="perfil"  *ngFor="let perfil of perfiles">{{ perfil }}</option>
+              </select>
+            </form>
+        -->
+            <select [(ngModel)]="usuario.rol" name="rol"  class="form-control" >
+                <option value="profesional" >Profesional</option>
+                <option value="normal">Normal</option>
+                <option value="free">Free</option>
+              <!--  <option [value]="perfil"  *ngFor="let perfil of perfiles">{{ perfil }}</option>-->
+            </select>
           </div>
 
           <input *ngIf="operation == 'register'" class="form-control marbo15" type="text" placeholder="Ingrese Nick">
           <div class="center marbo15">
             <!-- *ngIf="operation == 'login'"-->
-            <a  class="btn btn-primary">Iniciar Sesion</a>
+            <a (click)="loginUser()" class="btn btn-primary ml-2">Iniciar Sesion</a>
+            <a (click)="botonUsuario1()" class="btn btn-primary ml-2">Profesional</a>
+            <a (click)="botonUsuario2()" class="btn btn-primary ml-2">Normal</a>
+            <a (click)="botonUsuario3()" class="btn btn-primary ml-2">Free</a>
           </div>
         </form>
       </div> <!-- end bored container -->

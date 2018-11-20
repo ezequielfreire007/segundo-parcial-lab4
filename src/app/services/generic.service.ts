@@ -23,6 +23,6 @@ export class GenericService {
   }
 
   protected post<T>(api: string, body: any) {
-    return this.http.post<T>(this.url + api, body).toPromise();
+    return this.http.post<T>(this.url + api, body);
   }
 }

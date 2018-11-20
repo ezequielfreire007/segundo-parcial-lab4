@@ -1,8 +1,9 @@
 import { Perfil } from './ePerfil';
 
 export interface Usuario {
-  mail?: string;
+  usuarioID?: number;
+  email?: string;
   nombre?: string;
-  clave?: string;
-  perfil?: Perfil;
+  password?: string;
+  rol?: string;
 }
