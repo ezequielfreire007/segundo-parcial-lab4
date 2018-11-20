@@ -13,6 +13,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { GenericService } from './services/generic.service';
+import { AuthGuard } from './auth/auth-guard';
 
 
 export function getToken(): string {
@@ -42,7 +43,7 @@ export function getToken(): string {
     // JwtModule.forRoot({})
   ],
   providers: [
-    AuthService, AuthGuardService, GenericService,
+    AuthService, GenericService, AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

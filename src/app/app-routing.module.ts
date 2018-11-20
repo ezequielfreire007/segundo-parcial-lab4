@@ -7,13 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 // import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 // import { AuthGuardService } from './services/auth-guard.service';
 import { RoleGuardService as RoleGuard } from './services/role-guard.service';
-import { AuthGuardService } from './services/auth-guard.service';
+import { AuthGuardService } from './services/auth-guard.service'; // con este funciona
+import { AuthGuard } from './auth/auth-guard';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: ''}
 ];
 
