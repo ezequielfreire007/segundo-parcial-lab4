@@ -11,22 +11,14 @@
             <input [(ngModel)]="usuario.email" name="email" class="form-control marbo15" type="email" placeholder="Ingrese Email">
             <input [(ngModel)]="usuario.nombre" name="nombre"  class="form-control marbo15" type="text" placeholder="Ingrese Nombre">
             <input [(ngModel)]="usuario.password" name="password" class="form-control marbo15" type="password" placeholder="Ingrese Password">
-       <!--
-            <form [formGroup]="perfilForm" action="">
-              <select formControlName="perfilControl" class="form-control" >
-                  <option [(ngModel)]="usuario.rol" value="profesional">Profesional</option>
-                  <option [(ngModel)]="usuario.rol" value="normal">Normal</option>
-                  <option [(ngModel)]="usuario.rol" value="free">Free</option>
-               <option [value]="perfil"  *ngFor="let perfil of perfiles">{{ perfil }}</option>
-              </select>
-            </form>
-        -->
+
             <select [(ngModel)]="usuario.rol" name="rol"  class="form-control" >
                 <option value="profesional" >Profesional</option>
                 <option value="normal">Normal</option>
                 <option value="free">Free</option>
               <!--  <option [value]="perfil"  *ngFor="let perfil of perfiles">{{ perfil }}</option>-->
             </select>
+
           </div>
 
           <input *ngIf="operation == 'register'" class="form-control marbo15" type="text" placeholder="Ingrese Nick">

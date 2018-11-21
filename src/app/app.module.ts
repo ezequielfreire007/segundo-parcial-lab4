@@ -11,7 +11,6 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AuthService } from './services/auth.service';
-import { AuthGuardService } from './services/auth-guard.service';
 import { GenericService } from './services/generic.service';
 import { AuthGuard } from './auth/auth-guard';
 

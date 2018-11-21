@@ -26,7 +26,8 @@ export class AuthService extends GenericService {
 
   public logoutUser() {
     localStorage.removeItem('token');
-    this._router.navigate(['/home']);
+    localStorage.removeItem('user');
+    this._router.navigate(['/login']);
   }
 
   public getToken() {

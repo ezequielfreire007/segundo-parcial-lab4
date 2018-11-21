@@ -30,31 +30,11 @@ export class LoginComponent implements OnInit {
     .subscribe(
       res => {
         localStorage.setItem('token', res.token);
+        localStorage.setItem('user', JSON.stringify(this.usuario));
         this._router.navigate(['/home']);
       },
       err => console.log(err)
     );
-  }
-
-  ingresar() {
-    console.log(this.usuario);
-
-    console.log('procesos de token');
-
-    // this.loginService.tokenlog(this.usuario)
-    // .then( dato => {
-    //   console.log(dato);
-    //   // guardo el token el localstorage
-    //    localStorage.setItem('token', JSON.parse(JSON.stringify(dato)));
-
-    //    const token = localStorage.getItem('token');
-    //    const tokeni = this.jwt.decodeToken(token);
-    //    console.log(tokeni);
-
-    //   // this.router.navigate(['home']);
-    // })
-    // .catch( error => console.log(`error en token ${error}`));
-
   }
 
   ngOnInit() {

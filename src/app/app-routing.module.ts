@@ -7,8 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 // import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 // import { AuthGuardService } from './services/auth-guard.service';
 import { RoleGuardService as RoleGuard } from './services/role-guard.service';
-import { AuthGuardService } from './services/auth-guard.service'; // con este funciona
-import { AuthGuard } from './auth/auth-guard';
+import { AuthGuard } from './auth/auth-guard'; // Guards para routas
 
 
 const routes: Routes = [
