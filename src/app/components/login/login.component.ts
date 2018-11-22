@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { LoginService } from '../../services/login.service';
 import { Usuario } from '../../models/usuario';
-import { Perfil } from '../../models/ePerfil';
 import { FormGroup, Validator, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -16,13 +14,14 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   usuario: Usuario;
-  token: any;
+  // token: any;
   perfilForm: FormGroup;
   // loginUserData = {};
 
   constructor(private _auth: AuthService,
     private _router: Router, private fb: FormBuilder) {
     this.usuario = {};
+    this._auth.loggedIn();
   }
 
   loginUser() {

@@ -13,6 +13,9 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AuthService } from './services/auth.service';
 import { GenericService } from './services/generic.service';
 import { AuthGuard } from './auth/auth-guard';
+import { AreaClientesComponent } from './components/area-clientes/area-clientes.component';
+import { AltaServidorComponent } from './components/alta-servidor/alta-servidor.component';
+
 
 
 export function getToken(): string {
@@ -24,7 +27,9 @@ export function getToken(): string {
     AppComponent,
     LoginComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    AreaClientesComponent,
+    AltaServidorComponent
   ],
   imports: [
     BrowserModule,

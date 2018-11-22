@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { Usuario } from 'src/app/models/usuario';
@@ -10,18 +10,14 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class MenuComponent implements OnInit {
 
-  usuario: any;
-  usuarioActivo = 'no';
+  @Input() usuario: Usuario;
+  @Input() usuarioActivo: boolean;
 
   constructor(private _auth: AuthService, private _router: Router) {
     // this.usuario = {email: "pepe@utn.com", nombre: "Pepe", password: "123", rol: "profesional"};
-    this.usuario = JSON.parse(localStorage.getItem('user'));
+    // this.usuario = JSON.parse(localStorage.getItem('user'));
 
-    if (this.usuario) {
-      this.traerUsuarioLocalStorage();
-    } else {
-      this.usuarioActivo = 'no';
-    }
+
 
   }
 
@@ -40,8 +36,13 @@ export class MenuComponent implements OnInit {
     // this.usuario = JSON.parse(JSON.stringify(localStorage.getItem('user')));
     // const this_ = this;
     // this.usuario = JSON.parse(localStorage.getItem('user'));
-    this.usuarioActivo = 'ok';
+    // this.usuarioActivo = true;
     console.log(this.usuario);
+    console.log(this.usuarioActivo);
+  }
+
+  redirect(ruta: string) {
+
   }
 
 }

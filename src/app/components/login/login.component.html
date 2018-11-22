@@ -2,10 +2,10 @@
  <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-md-6">
-      <div class="center">
+      <div class="center mt-5">
         <h3>Iniciar Sesion</h3>
       </div>
-      <div class="borered-container">
+      <div class="borered-container ">
         <form action="">
           <div class="form-group">
             <input [(ngModel)]="usuario.email" name="email" class="form-control marbo15" type="email" placeholder="Ingrese Email">
@@ -24,10 +24,10 @@
           <input *ngIf="operation == 'register'" class="form-control marbo15" type="text" placeholder="Ingrese Nick">
           <div class="center marbo15">
             <!-- *ngIf="operation == 'login'"-->
-            <a (click)="loginUser()" class="btn btn-primary ml-2">Iniciar Sesion</a>
-            <a (click)="botonUsuario1()" class="btn btn-primary ml-2">Profesional</a>
-            <a (click)="botonUsuario2()" class="btn btn-primary ml-2">Normal</a>
-            <a (click)="botonUsuario3()" class="btn btn-primary ml-2">Free</a>
+            <a (click)="loginUser()"     class="btn boton ml-1 col col-lg-3 marbo15">Iniciar Sesion</a>
+            <a (click)="botonUsuario1()" class="btn btn-primary ml-1 col col-lg-3 marbo15">Profesional</a>
+            <a (click)="botonUsuario2()" class="btn btn-primary ml-1 col col-lg-3 marbo15">Normal</a>
+            <a (click)="botonUsuario3()" class="btn btn-primary ml-1 col col-lg-3 marbo15">Free</a>
           </div>
         </form>
       </div> <!-- end bored container -->

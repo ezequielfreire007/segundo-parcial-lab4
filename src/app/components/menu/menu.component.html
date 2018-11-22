@@ -2,18 +2,17 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a *ngIf="usuarioActivo == 'no'" class="navbar-brand" href="#">Segundo Parcial</a>
-  <h3 *ngIf="usuarioActivo == 'ok'">{{ usuario.nombre }}</h3>
+  <h3  class="navbar-brand" *ngIf="usuarioActivo">Hola {{ usuario.nombre }}</h3>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"  href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link active" [routerLink]="['/area-clientes']" routerLinkActive="router-link-active" >Area clientes <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Mis Servidores<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Agregar Servidor <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
