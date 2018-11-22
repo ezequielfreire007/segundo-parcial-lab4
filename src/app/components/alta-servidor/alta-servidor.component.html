@@ -1,3 +1,13 @@
-<p>
-  alta-servidor works!
-</p>
+<form [formGroup]="altaServidorForm" class="continer mt-5">
+  <div class="form-row justify-content-md-center">
+    <div class="form-group col-md-6">
+      <label >Nombre del Sitio</label>
+      <input [(ngModel)]="miServidor.nombreDelSitio" type="text" [formControl]="nombreDelSitio" name="nombreDelSitio" required class="form-control"  placeholder="www.jhondoe.com">
+    </div>
+    <div class="form-group col-md-6">
+      <label >Capacidad en MB</label>
+      <input [(ngModel)]="miServidor.espacio"  type="number" [formControl]="espacio" name="espacio" required class="form-control"  placeholder="300 ">
+    </div>
+  </div>
+  <button type="button" (click)="subirServidor()" [disabled]="!altaServidorForm.valid" class="btn btn-primary">Subir Servidor</button>
+</form>

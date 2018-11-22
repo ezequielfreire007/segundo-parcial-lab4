@@ -42,7 +42,16 @@ export class MenuComponent implements OnInit {
   }
 
   redirect(ruta: string) {
-
+    switch (ruta) {
+      case 'alta-servidor':
+        this._router.navigate(['home/alta-servidor']);
+        break;
+      case 'home':
+        this._router.navigate(['home']);
+        break;
+      default:
+        break;
+    }
   }
 
 }

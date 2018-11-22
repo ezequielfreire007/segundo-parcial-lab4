@@ -37,7 +37,7 @@ export function getToken(): string {
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
     // [JwtModule.forRoot({
     //   config: {
     //       tokenGetter: (getToken),
